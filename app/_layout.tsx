@@ -6,7 +6,7 @@ const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
 	unsavedChangesWarning: false,
 });
 
-export default function RootLayout() {
+const RootLayout = () => {
 	return (
 		<ConvexProvider client={convex}>
 			<ThemeProvider>
@@ -21,4 +21,6 @@ export default function RootLayout() {
 			</ThemeProvider>
 		</ConvexProvider>
 	);
-}
+};
+
+export default RootLayout;
